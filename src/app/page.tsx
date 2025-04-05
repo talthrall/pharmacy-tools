@@ -2,12 +2,21 @@
 
 import React, { useState } from 'react';
 
+// Define result type to avoid `any` usage
+type CalculationResults = {
+  totalMass: number;
+  blendDensity: number;
+  expectedFill: number;
+  utilization: number;
+  apiPercent: number;
+};
+
 export default function CapsuleFillCalculator() {
   const [apiMass, setApiMass] = useState('');
   const [fillerMass, setFillerMass] = useState('');
   const [packStat, setPackStat] = useState('');
   const [capsuleSize, setCapsuleSize] = useState('0');
-  const [results, setResults] = useState<any>(null);
+  const [results, setResults] = useState<CalculationResults | null>(null);
 
   const capsuleCapacities = {
     '000': 0.95,
