@@ -5,8 +5,8 @@ import type { ReactNode } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Pharmacy Compounding Tools Homepage",
-  description: "Pharmacy Compounding Tools Homepage",
+  title: "Pharmacy Tools",
+  description: "Pharmacy Tools",
 };
 
 export default function RootLayout({
