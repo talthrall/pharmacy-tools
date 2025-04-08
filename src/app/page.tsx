@@ -1,28 +1,23 @@
 "use client";
 
-import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground p-6 transition-colors">
-      <div className="max-w-xl mx-auto bg-card rounded-2xl shadow p-6 space-y-4">
-        <h1 className="text-3xl font-bold text-center">Pharmacy Tools</h1>
-        <p className="text-lg text-center">Choose a calculator or tool to get started:</p>
+    <main className="min-h-screen bg-background text-foreground p-6 flex items-center justify-center">
+      <section className="w-full max-w-xl bg-card rounded-2xl shadow-xl p-8 space-y-6">
+        <header className="space-y-2">
+          <h1 className="text-4xl font-semibold text-center tracking-tight">Pharmacy Tools</h1>
+          <p className="text-lg text-center text-muted-foreground">
+            Choose a calculator or tool to get started:
+          </p>
+        </header>
 
-        <div className="space-y-2">
-          <Link href="/capsule-fill">
-            <div className="block w-full p-3 bg-primary text-primary-foreground rounded hover:opacity-90 text-center">
-              Capsule Fill Calculator
-            </div>
-          </Link>
-
-          <Link href="/compound-check">
-            <div className="block w-full p-3 bg-primary text-primary-foreground rounded hover:opacity-90 text-center">
-              Compound Strength Verifier
-            </div>
-          </Link>
+        <div className="space-y-4">
+          <Button href="/capsule-fill">Capsule Fill Calculator</Button>
+          <Button href="/compound-check">Compound Strength Verifier</Button>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
