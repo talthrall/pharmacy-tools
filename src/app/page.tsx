@@ -27,14 +27,14 @@ export default function Home() {
 
         <div className="space-y-4">
           <Button href="/capsule-fill">
-            <div className="flex items-center justify-center gap-2 bg-teal-600 text-white">
+            <div className="flex items-center justify-center gap-2 text-teal-600">
               <Pill className="w-5 h-5" />
               Capsule Fill Calculator
             </div>
           </Button>
 
           <Button href="/compound-check">
-            <div className="flex items-center justify-center gap-2 bg-teal-600 text-white">
+            <div className="flex items-center justify-center gap-2 text-teal-600">
               <FlaskConical className="w-5 h-5" />
               Compound Strength Verifier
             </div>

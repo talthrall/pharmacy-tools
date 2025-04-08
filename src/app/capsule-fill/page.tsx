@@ -49,11 +49,11 @@ export default function CapsuleFillCalculator() {
   return (
     <div className="min-h-screen bg-background text-foreground p-6">
       <div className="max-w-xl mx-auto bg-card rounded-2xl shadow p-6 space-y-4">
-        <h1 className="text-2xl font-bold">Capsule Fill Calculator</h1>
+        <h1 className="text-2xl font-bold text-teal-800">Capsule Fill Calculator</h1>
 
         <div className="grid grid-cols-1 gap-4">
           <input
-            className="p-2 border rounded"
+            className="p-2 border rounded text-teal-700"
             type="number"
             placeholder="API Mass (g)"
             value={apiMass}
@@ -61,7 +61,7 @@ export default function CapsuleFillCalculator() {
           />
 
           <input
-            className="p-2 border rounded"
+            className="p-2 border rounded text-teal-700"
             type="number"
             placeholder="Filler Mass (g)"
             value={fillerMass}
@@ -69,7 +69,7 @@ export default function CapsuleFillCalculator() {
           />
 
           <input
-            className="p-2 border rounded"
+            className="p-2 border rounded text-teal-700"
             type="number"
             placeholder="Pack Stat (g/cc)"
             value={packStat}
@@ -77,7 +77,7 @@ export default function CapsuleFillCalculator() {
           />
 
           <select
-            className="p-2 border rounded"
+            className="p-2 border rounded text-teal-700"
             value={capsuleSize}
             onChange={(e) => setCapsuleSize(e.target.value)}
           >
@@ -89,7 +89,7 @@ export default function CapsuleFillCalculator() {
           </select>
 
           <button
-            className="p-2 bg-primary text-primary-foreground rounded hover:opacity-90"
+            className="bg-teal-500 text-white px-4 py-2 rounded ml-2"
             onClick={handleCalculate}
           >
             Calculate

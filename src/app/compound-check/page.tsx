@@ -82,31 +82,31 @@ export default function CompoundStrengthVerifier() {
 
   return (
     <div className="max-w-xl mx-auto p-4">
-      <h1 className="text-xl font-semibold mb-4">Compound Strength Verifier</h1>
+      <h1 className="text-xl font-semibold mb-4 text-teal-800">Compound Strength Verifier</h1>
 
       {/* Target Strength */}
       <div className="mb-2">
-        <label className="block mb-1">Target Strength</label>
+        <label className="block mb-1 text-teal-700">Target Strength</label>
         <input
           type="text"
           value={targetStrength}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setTargetStrength(e.target.value)
           }
-          className="w-full border rounded px-2 py-1"
+          className="w-full border rounded px-2 py-1 text-teal-600"
           placeholder="e.g. 10"
         />
       </div>
 
       {/* Target Unit */}
       <div className="mb-2">
-        <label className="block mb-1">Unit</label>
+        <label className="block mb-1 text-teal-700">Unit</label>
         <select
           value={targetUnit}
           onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
             setTargetUnit(e.target.value as 'mg/mL' | 'mg/g' | 'mg/capsule' | '%')
           }
-          className="w-full border rounded px-2 py-1"
+          className="w-full border rounded px-2 py-1 text-teal-600"
         >
           <option value="mg/mL">mg/mL</option>
           <option value="mg/g">mg/g</option>
@@ -117,7 +117,7 @@ export default function CompoundStrengthVerifier() {
 
       {/* Total Quantity */}
       <div className="mb-4">
-        <label className="block mb-1">
+        <label className="block mb-1 text-teal-700">
           Total Quantity (
           {targetUnit.includes('capsule') ? 'capsules' : targetUnit.split('/')[1]})
         </label>
@@ -127,13 +127,13 @@ export default function CompoundStrengthVerifier() {
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setTotalQuantity(e.target.value)
           }
-          className="w-full border rounded px-2 py-1"
+          className="w-full border rounded px-2 py-1 text-teal-600"
           placeholder="e.g. 120"
         />
       </div>
 
       {/* Components List */}
-      <h2 className="text-lg font-medium mb-2">Components</h2>
+      <h2 className="text-lg font-medium mb-2 text-teal-700">Components</h2>
       {components.map((comp, index) => (
         <div key={comp.id} className="flex gap-2 mb-2">
           <input
@@ -142,7 +142,7 @@ export default function CompoundStrengthVerifier() {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleComponentChange(index, 'name', e.target.value)
             }
-            className="flex-1 border rounded px-2 py-1"
+            className="flex-1 border rounded px-2 py-1 text-teal-600"
             placeholder="Name"
           />
           <input
@@ -151,7 +151,7 @@ export default function CompoundStrengthVerifier() {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleComponentChange(index, 'amount', e.target.value)
             }
-            className="w-24 border rounded px-2 py-1"
+            className="w-24 border rounded px-2 py-1 text-teal-600"
             placeholder="Amount"
           />
           <select
@@ -159,7 +159,7 @@ export default function CompoundStrengthVerifier() {
             onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
               handleComponentChange(index, 'unit', e.target.value as 'mg' | 'g' | '%')
             }
-            className="w-24 border rounded px-2 py-1"
+            className="w-24 border rounded px-2 py-1 text-teal-600"
           >
             <option value="mg">mg</option>
             <option value="g">g</option>
@@ -171,7 +171,7 @@ export default function CompoundStrengthVerifier() {
       {/* Add Component */}
       <button
         onClick={addComponent}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        className="bg-teal-500 text-white px-4 py-2 rounded"
       >
         Add Component
       </button>
@@ -179,7 +179,7 @@ export default function CompoundStrengthVerifier() {
       {/* Calculate Strength */}
       <button
         onClick={calculate}
-        className="bg-green-500 text-white px-4 py-2 rounded ml-2"
+        className="bg-teal-700 text-white px-4 py-2 rounded ml-2"
       >
         Calculate
       </button>
