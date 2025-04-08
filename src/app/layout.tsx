@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Pharmacy Tools",
-  description: "Pharmacy Tools",
+  description: "Modern, tech-forward tools to support non-sterile compounding pharmacy workflows.",
 };
 
 export default function RootLayout({
