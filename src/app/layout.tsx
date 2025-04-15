@@ -1,19 +1,16 @@
-import "./globals.css";
-import { Inter } from "next/font/google";
-import type { ReactNode } from "react";
+import './globals.css';
+import { Inter } from 'next/font/google';
+import type { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: "Pharmacy Tools",
-  description: "Modern, tech-forward tools to support non-sterile compounding pharmacy workflows.",
+  title: 'Pharmacy Tools',
+  description: 'Modern, tech-forward tools to support non-sterile compounding pharmacy workflows.',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -22,10 +19,11 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
-          <title></title>
+        <title>Pharmacy Tools</title>
       </head>
       <body className={`${inter.className} antialiased`}>
         {children}
+        <Analytics /> {/* This is where Analytics goes */}
       </body>
     </html>
   );
